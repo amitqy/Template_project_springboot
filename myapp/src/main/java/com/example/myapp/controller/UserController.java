@@ -45,14 +45,14 @@ public class UserController {
 	 //return userService.getAllUserDtos();  
 	}
 	
-	@ApiOperation(value = "Get an User by USER_ID", produces = "application/json")
+	@ApiOperation(value = "Get a User by USER_ID", produces = "application/json")
 	@GetMapping("/{userid}")  
 	private UserDto getUserDtoById(@PathVariable("userid") long userid)   
 	{  
 	return userService.getUserDtoById(userid);  
 	}
 	
-	@ApiOperation(value = "Create an User", produces = "application/json")
+	@ApiOperation(value = "Create a User", produces = "application/json")
 	@PostMapping
 	private UserDto createUserDto(@RequestBody UserDto user)   
 	{ 
@@ -61,7 +61,7 @@ public class UserController {
 	return user;  
 	}
 	
-	@ApiOperation(value = "Update an User", produces = "application/json")
+	@ApiOperation(value = "Update a User", produces = "application/json")
 	@PutMapping
 	private UserDto updaUserDto(@RequestBody UserDto user)
 	{
@@ -69,7 +69,7 @@ public class UserController {
 		return user;
 	}
 	
-	@ApiOperation(value = "Delete an User", produces = "application/json")
+	@ApiOperation(value = "Delete a User", produces = "application/json")
 	@DeleteMapping("/{userid}")
 	private void deleteUser(@PathVariable("userid") long userid) {
 		userService.delete(userid);
