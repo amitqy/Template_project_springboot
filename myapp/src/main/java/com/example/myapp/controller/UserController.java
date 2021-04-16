@@ -27,7 +27,7 @@ public class UserController {
 
 	
 	@Autowired  
-	UserService userService;  
+	private UserService userService;  
 //	@GetMapping
 //    public ResponseEntity<UserPageDto> getUsers(@RequestParam(required = false, value = "pageNo") Integer pageNo,
 //            @RequestParam(required = false, value = "pageSize") Integer pageSize,
